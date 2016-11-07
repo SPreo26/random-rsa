@@ -68,12 +68,12 @@ def create_random_prime(prime_size, num_blocks)
         return val if val.prime?
       end
       counter += 1
-      puts "Sleeping for #{SLEEP_SECODNS_BETWEEN_API_CALLS} seconds between each API call..."
+      puts "Sleeping for #{SLEEP_SECODNS_BETWEEN_API_CALLS} second(s) between each API call..."
       sleep SLEEP_SECODNS_BETWEEN_API_CALLS    
     end
 
     if SLEEP_AFTER_API_LIMIT
-      puts "Sleeping for #{SLEEP_SECONDS_ON_API_LIMIT} seconds: only #{API_CALL_LIMIT} API calls at a time will be made..."
+      puts "Sleeping for #{SLEEP_SECONDS_ON_API_LIMIT} second(s): only #{API_CALL_LIMIT} API calls at a time will be made..."
       sleep SLEEP_SECONDS_ON_API_LIMIT
     else
       raise "Exiting after #{API_CALL_LIMIT*num_blocks} unsuccessful attempts to generate a prime number"
