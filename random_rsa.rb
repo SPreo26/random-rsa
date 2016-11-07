@@ -1,4 +1,4 @@
-require 'unirest'
+require 'unirest' #IF UNIREST GEM IS NOT PRESENT on your machine: run $gem install unirest
 require_relative 'random_rsa_helpers'
 
 ENCRYPTION_BITS = 1024
